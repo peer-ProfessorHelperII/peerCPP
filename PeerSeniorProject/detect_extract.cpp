@@ -27,7 +27,7 @@ typedef struct gVariables{
 };
 
 int keypointDetection(string imageName1, string imageName2){
-	gVariables g;
+	gVariables g; // initialize global variables
 	Mat img_1 = imread(imageName1.c_str(), CV_LOAD_IMAGE_GRAYSCALE);
 	Mat img_2 = imread(imageName2.c_str(), CV_LOAD_IMAGE_GRAYSCALE);
 	if (img_1.empty())
@@ -66,7 +66,7 @@ int keypointDetection(string imageName1, string imageName2){
 }
 
 int extractAndMatch(string imageName1, string imageName2){
-	gVariables g;
+	gVariables g; // initialize global variables
 	Mat img_1 = imread(imageName1.c_str(), CV_LOAD_IMAGE_GRAYSCALE);
 	Mat img_2 = imread(imageName2.c_str(), CV_LOAD_IMAGE_GRAYSCALE);
 	if (img_1.empty())
